@@ -1,5 +1,4 @@
 // File: 2-get_students_by_loc.js
-
 /**
  * Function to filter students by location
  * @param {Array} students - List of student objects
@@ -9,5 +8,4 @@
 function getStudentsByLocation(students, city) {
     return students.filter(student => student.location === city);
 }
-
 module.exports = getStudentsByLocation;
