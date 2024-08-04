@@ -1,3 +1,5 @@
+// 6-set.js
+
 /**
  * Converts an array into a Set.
  * @param {Array} array - The array to convert.
