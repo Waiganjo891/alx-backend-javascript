@@ -1,4 +1,5 @@
 // Function to get a list of students
+
 function getListStudents() {
     return [
         { id: 1, name: 'John Doe', location: 'New York' },
@@ -8,6 +9,7 @@ function getListStudents() {
 }
 
 // Function to get the sum of all student ids
+
 function getStudentIdsSum(students) {
     return students.reduce((sum, student) => sum + student.id, 0);
 }
