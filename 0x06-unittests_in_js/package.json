@@ -1,9 +1,10 @@
 {
-  "name": "mocha-test",
+  "name": "mocha-test-example",
   "version": "1.0.0",
   "description": "Mocha Test for calculateNumber function",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha 0-calcul.test.js"
+    "test": "mocha"
   },
   "devDependencies": {
     "mocha": "^10.0.0"
