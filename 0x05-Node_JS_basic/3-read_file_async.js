@@ -16,24 +16,24 @@ function countStudents(path) {
             totalStudents += 1;
             const field = studentData[3];
             const firstName = studentData[0];
-              if (!students[field]) {
-                students[field] = [];
-              }
-              students[field].push(firstName);
+            if (!students[field]) {
+              students[field] = [];
             }
-            });
-            console.log(`Number of students: ${totalStudents}`);
-            for (const field in students) {
-              const count = students[field].length;
-              const list = students[field].join(', ');
-              console.log(`Number of students in ${field}: ${count}. List: ${list}`);
-            }
-            resolve();
-          })
-          .catch(() => {
-            reject(new Error('Cannot load the database'));
-          });
-    });
+            students[field].push(firstName);
+          }
+        });
+        console.log(`Number of students: ${totalStudents}`);
+        for (const field in students) {
+          const count = students[field].length;
+          const list = students[field].join(', ');
+          console.log(`Number of students in ${field}: ${count}. List: ${list}`);
+        }
+        resolve();
+      })
+      .catch(() => {
+        reject(new Error('Cannot load the database'));
+      });
+  });
 }
 
 module.exports = countStudents;
