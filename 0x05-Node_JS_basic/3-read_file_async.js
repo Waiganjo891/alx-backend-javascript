@@ -5,7 +5,7 @@ function countStudents(path) {
     fs.promises.readFile(path, 'utf-8')
       .then((data) => {
         const rows = data.split('\n').filter((line) => line.trim() !== '');
-	const headers = rows.shift().split(',');
+        const headers = rows.shift().split(',');
         const students = {};
         let totalStudents = 0;
         rows.forEach((row) => {
@@ -22,9 +22,11 @@ function countStudents(path) {
         });
         console.log(`Number of students: ${totalStudents}`);
         for (const field in students) {
-          const count = students[field].length;
-          const list = students[field].join(', ');
-          console.log(`Number of students in ${field}: ${count}. List: ${list}`);
+          if (students.hasOwnProperty(field)) {
+            const count = students[field].length;
+            const list = students[field].join(', ');
+            console.log(`Number of students in ${field}: ${count}. List: ${list}`);
+          }
         }
         resolve();
       })
