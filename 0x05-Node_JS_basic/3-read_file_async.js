@@ -5,6 +5,7 @@ function countStudents(path) {
     fs.promises.readFile(path, 'utf-8')
       .then((data) => {
         const rows = data.split('\n').filter((line) => line.trim() !== '');
+	const headers = rows.shift().split(',');
         const students = {};
         let totalStudents = 0;
         rows.forEach((row) => {
