@@ -16,14 +16,14 @@ function countStudents(path) {
     for (let i = 1; i < lines.length; i += 1) {
       const line = lines[i].trim();
       if (line !== '') {
-            const [firstName, , , field] = line.split(',');
-            if (firstName && field) {
-                  if (!studentsByField[field]) {
-                        studentsByField[field] = [];
-                  }
-                  studentsByField[field].push(firstName);
-                  totalStudents += 1;
-            }
+        const [firstName, , , field] = line.split(',');
+        if (firstName && field) {
+          if (!studentsByField[field]) {
+            studentsByField[field] = [];
+          }
+          studentsByField[field].push(firstName);
+          totalStudents += 1;
+        }
       }
     }
 
