@@ -7,13 +7,13 @@ const path = require('path');
 async function countStudents(filePath) {
   try {
     const data = await fs.promises.readFile(filePath, 'utf8');
-    const lines = data.split('\n').filter(line => line.trim() !== '');
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
 
     if (lines.length === 0) {
       throw new Error('Cannot load the database');
     }
     const header = lines.shift().split(',');
-    const students = lines.map(line => line.split(','));
+    const students = lines.map((line) => line.split(','));
     const fields = {};
     students.forEach(student => {
       const field = student[3];

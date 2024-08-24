@@ -8,7 +8,7 @@ async function readDatabase(filePath) {
     const lines = data.split('\n');
     const fields = {};
 
-    for (let line of lines) {
+    for (const line of lines) {
       if (line.trim()) {
         const [firstname, field] = line.split(',');
         if (!fields[field]) {
