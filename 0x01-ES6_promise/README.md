@@ -1,1 +1,2 @@
-ES6 Promises
+0x01. ES6 Promises
+

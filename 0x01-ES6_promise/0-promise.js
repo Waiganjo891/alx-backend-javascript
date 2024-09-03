@@ -1,11 +1,15 @@
-// File: 0-promise.js
 function getResponseFromAPI() {
-    return new Promise((resolve, reject) => {
-        // Simulate an API call with a timeout
-        setTimeout(() => {
-            resolve("API response");
-        }, 1000);
-    });
+  return new Promise((resolve, reject) => {
+    const success = true;
+
+    if (success) {
+      resolve("API call successful");
+    } else {
+      reject("API call failed");
+    }
+  });
 }
 
-export default getResponseFromAPI;
+getResponseFromAPI()
+  .then(response => console.log(response))
+  .catch(error => console.error(error));
