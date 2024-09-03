@@ -1,15 +1,11 @@
-function getResponseFromAPI() {
-  return new Promise((resolve, reject) => {
-    const success = true;
+// 0-promise.js
 
-    if (success) {
-      resolve("API call successful");
-    } else {
-      reject("API call failed");
-    }
+function getResponseFromAPI() {
+  return new Promise((resolve) => {
+    resolve('Success');
   });
 }
 
-getResponseFromAPI()
-  .then(response => console.log(response))
-  .catch(error => console.error(error));
+module.exports = {
+  getResponseFromAPI,
+};
