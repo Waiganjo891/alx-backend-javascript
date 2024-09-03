@@ -1,6 +1,6 @@
 // File: 3-all.js
 
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 export function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
